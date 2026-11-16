@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1200" viewBox="0 0 1500 1200">
+<style>text{font-family:Arial,sans-serif;fill:#20334a}.title{font-size:30px;font-weight:bold}.h{font-size:22px;font-weight:bold}.t{font-size:17px}.small{font-size:14px}.wire{stroke:#14828c;stroke-width:2.5;fill:none}.box{fill:#fff;stroke:#9fb2c4;stroke-width:1.4}</style>
+<rect width="1500" height="1200" fill="#f3f7fa"/>
+<text x="40" y="48" class="title">Arduino Human-Following Robot | Wiring</text>
+<text x="40" y="78" class="t">Arduino Uno · L293D v1 motor shield · SG90 · ultrasonic + two IR sensors</text>
+<rect x="35" y="105" width="1430" height="110" rx="10" class="box"/>
+<text x="51" y="136" class="h">CONTROL AND SIGNALS</text>
+<text x="60" y="180" class="t">Ultrasonic + IR</text>
+<path d="M220 175 L340 175" class="wire"/>
+<text x="360" y="180" class="t">Arduino Uno + shield</text>
+<path d="M590 175 L735 175" class="wire"/>
+<text x="755" y="180" class="t">Four DC motors</text>
+<path d="M665 175 V200 H1120 V175" class="wire"/>
+<text x="1140" y="180" class="t">SG90 pan servo</text>
+<rect x="35" y="240" width="700" height="405" rx="10" class="box"/>
+<text x="51" y="271" class="h">SENSOR CONNECTIONS</text>
+<rect x="65" y="305" width="240" height="245" rx="10" class="box"/>
+<text x="81" y="336" class="h">UNO ANALOG PINS</text>
+<rect x="465" y="305" width="235" height="245" rx="10" class="box"/>
+<text x="481" y="336" class="h">SENSORS</text>
+<text x="85" y="365" class="t">A2</text>
+<path d="M235 360 L485 360" class="wire"/>
+<text x="500" y="365" class="small">Ultrasonic TRIG</text>
+<text x="85" y="410" class="t">A3</text>
+<path d="M235 405 L485 405" class="wire"/>
+<text x="500" y="410" class="small">Ultrasonic ECHO</text>
+<text x="85" y="455" class="t">A5</text>
+<path d="M235 450 L485 450" class="wire"/>
+<text x="500" y="455" class="small">Left IR OUT</text>
+<text x="85" y="500" class="t">A1</text>
+<path d="M235 495 L485 495" class="wire"/>
+<text x="500" y="500" class="small">Right IR OUT</text>
+<text x="65" y="590" class="small">All sensor VCC → regulated 5 V; all sensor GND → GND.</text>
+<text x="65" y="619" class="small">IR detection defaults LOW. Ultrasonic model assumed HC-SR04.</text>
+<rect x="765" y="240" width="700" height="405" rx="10" class="box"/>
+<text x="781" y="271" class="h">MOTOR AND SERVO CONNECTIONS</text>
+<rect x="795" y="305" width="235" height="245" rx="10" class="box"/>
+<text x="811" y="336" class="h">L293D SHIELD</text>
+<rect x="1180" y="305" width="250" height="245" rx="10" class="box"/>
+<text x="1196" y="336" class="h">ACTUATORS</text>
+<text x="815" y="365" class="t">M1</text>
+<path d="M965 360 L1200 360" class="wire"/>
+<text x="1210" y="365" class="small">Left front motor</text>
+<text x="815" y="410" class="t">M2</text>
+<path d="M965 405 L1200 405" class="wire"/>
+<text x="1210" y="410" class="small">Left rear motor</text>
+<text x="815" y="455" class="t">M3</text>
+<path d="M965 450 L1200 450" class="wire"/>
+<text x="1210" y="455" class="small">Right front motor</text>
+<text x="815" y="500" class="t">M4</text>
+<path d="M965 495 L1200 495" class="wire"/>
+<text x="1210" y="500" class="small">Right rear motor</text>
+<text x="795" y="590" class="small">SG90: signal → D10, red → regulated 5 V, brown → GND.</text>
+<text x="795" y="619" class="small">Verify servo-header S/+/- markings; flip motor inversion as needed.</text>
+<rect x="35" y="670" width="700" height="270" rx="10" class="box"/>
+<text x="51" y="701" class="h">CONFIRMED MOTOR POWER</text>
+<rect x="65" y="735" width="205" height="85" rx="10" class="box"/>
+<text x="81" y="766" class="h">4 × AA holder</text>
+<text x="80" y="795" class="small">Match cells to motor supply</text>
+<path d="M270 757 L340 757" class="wire"/>
+<circle cx="340" cy="757" r="4" fill="#14828c"/>
+<path d="M343 756 L373 737" class="wire"/>
+<circle cx="383" cy="757" r="4" fill="#14828c"/>
+<path d="M387 757 L465 757" class="wire"/>
+<text x="325" y="720" class="small">Switch</text>
+<text x="480" y="765" class="t">EXT_PWR +</text>
+<path d="M270 800 L465 800" class="wire"/>
+<text x="480" y="807" class="t">EXT_PWR GND</text>
+<text x="65" y="866" class="small">AA pack powers DC motors through the shield terminals.</text>
+<text x="65" y="898" class="small">Set the PWR jumper for the chosen logic supply.</text>
+<rect x="765" y="670" width="700" height="270" rx="10" class="box"/>
+<text x="781" y="701" class="h">RECOMMENDED LOGIC / SERVO POWER</text>
+<text x="795" y="735" class="t">Regulated 5 V USB source → Uno USB input.</text>
+<text x="795" y="777" class="t">Remove shield PWR jumper for split supplies.</text>
+<text x="795" y="819" class="t">Uno / shield logic → sensors and SG90 header.</text>
+<text x="795" y="861" class="t">Common local ground; check servo-current headroom.</text>
+<text x="795" y="903" class="small">Follow the wiring guide when selecting the power arrangement.</text>
+<rect x="35" y="965" width="1430" height="170" rx="10" class="box"/>
+<text x="51" y="996" class="h">ASSEMBLY NOTES</text>
+<text x="60" y="1024" class="t">Lift wheels for first setup. Calibrate SG90 travel and all four motor directions before floor operation.</text>
+<text x="60" y="1060" class="t">Four AA cells are not a regulated 5 V logic supply. Do not connect raw battery voltage to the Uno 5V pin.</text>
+<text x="60" y="1096" class="t">Ultrasonic / IR sensors detect surfaces, not human identity. Lost target stops drive; R or reset starts a new scan.</text>
+<text x="40" y="1176" class="small">See docs/WIRING.md for complete power notes and docs/SETUP.md for Arduino IDE calibration.</text>
+</svg>
